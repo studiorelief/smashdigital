@@ -1,0 +1,8 @@
+.swiper-wrapper {
+    overflow: visible !important;
+  }
+
+/* swiper linear loop */
+.swiper.is-partenaires .swiper-wrapper {
+    transition-timing-function: linear;
+}
