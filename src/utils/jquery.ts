@@ -17,12 +17,38 @@ export function blogCategories() {
   });
 }
 
-// CMS Title
+// Span - CMS Title
 export function spanCMS() {
   $(document).ready(function () {
     $('.cms-title').html(function (_, html) {
       return html.replace(/-(.*?)-/g, '<span class="text-style-switch">$1</span>');
     });
+  });
+}
+
+// Span - CMS Title
+export function spanRisques() {
+  $(document).ready(function () {
+    $('.risque_heading.w-richtext').html(function (_, html) {
+      return html.replace(/-(.*?)-/g, '<span class="text-style-switch">$1</span>');
+    });
+  });
+}
+
+// Span - CMS Ancre
+export function spanUcCMS() {
+  $(document).ready(function () {
+    $('.text-rich-text-anchor').html(function (_, html) {
+      return html.replace(/-(.*?)-/g, '<span class="text-style-switch-uc">$1</span>');
+    });
+  });
+}
+
+// Replace span-wrapper by span-element
+export function swipeElement() {
+  $('.span-wrapper').each(function (index) {
+    const relatedEl = $('.span-element').eq(index);
+    relatedEl.appendTo($(this));
   });
 }
 

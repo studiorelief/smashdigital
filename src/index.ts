@@ -1,8 +1,15 @@
 import './index.css';
 
-import { blogCategories, copyBlog, hideEmpty, spanCMS } from '$utils/jquery';
+import {
+  blogCategories,
+  copyBlog,
+  /* hideEmpty, */ spanCMS,
+  spanRisques,
+  spanUcCMS,
+  swipeElement,
+} from '$utils/jquery';
 import { loadScript } from '$utils/loadScript';
-import { swiperPartners } from '$utils/swiper';
+import { swiperPartners, swiperReferences, swiperRisque, swiperUseCase } from '$utils/swiper';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -13,9 +20,14 @@ window.Webflow.push(() => {
     loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-toc@1/toc.js'),
     loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-socialshare@1/socialshare.js'),
     loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-richtext@1/richtext.js'),
+    /* loadScript(
+      'https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js'
+    ), */
     loadScript(
       'https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js'
     ),
+    loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsstatic@1/cmsstatic.js'),
+    loadScript('https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js'),
   ]).then(() => {
     setTimeout(() => {
       loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js');
@@ -26,7 +38,17 @@ window.Webflow.push(() => {
   ! Global
   */
 
-  hideEmpty();
+  /* hideEmpty(); */
+  if (window.matchMedia('(min-width: 991px)').matches) {
+    swipeElement();
+  }
+
+  /* 
+  Replace element -*-
+  */
+  spanCMS();
+  spanUcCMS();
+  spanRisques();
 
   const path = window.location.pathname;
 
@@ -35,11 +57,15 @@ window.Webflow.push(() => {
   }
   if (path.includes('/articles')) {
     copyBlog();
-  }
-  if (path.includes('/landing')) {
-    spanCMS();
+    swiperUseCase();
   }
   if (path.includes('/landing') || path.includes('/')) {
     swiperPartners();
+    swiperReferences();
+    swiperRisque();
+  }
+
+  if (path.includes('/use-case')) {
+    swiperUseCase();
   }
 });
