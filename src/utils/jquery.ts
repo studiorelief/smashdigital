@@ -54,7 +54,7 @@ export function swipeElement() {
 
 // Copy clipboard URL
 export function copyBlog() {
-  const button = document.querySelector('.blog-c-i_social-link.is-url');
+  const button = document.querySelector('.blog-content_social-link.is-url');
 
   if (button) {
     button.addEventListener('click', function () {

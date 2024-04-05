@@ -59,6 +59,7 @@ window.Webflow.push(() => {
     copyBlog();
     swiperUseCase();
   }
+
   if (path.includes('/landing') || path.includes('/')) {
     swiperPartners();
     swiperReferences();

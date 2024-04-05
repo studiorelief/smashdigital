@@ -1,3 +1,8 @@
+.section_hero:hover {
+  cursor: url('https://uploads-ssl.webflow.com/65c9e33d79bb75bfc766d6f0/660ec6e4d6b041d8b85286e0_cursor-14.svg') 0 0, auto;
+}
+
+
 .swiper-wrapper {
   overflow: visible !important;
 }
