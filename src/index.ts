@@ -4,6 +4,7 @@ import {
   blogCategories,
   copyBlog,
   /* hideEmpty, */ spanCMS,
+  spanGeneric,
   spanRisques,
   spanUcCMS,
   swipeElement,
@@ -14,7 +15,7 @@ import { swiperPartners, swiperReferences, swiperRisque, swiperUseCase } from '$
 window.Webflow ||= [];
 window.Webflow.push(() => {
   /*
-  ! Call functions
+  ! Call Script
   */
   Promise.all([
     loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-toc@1/toc.js'),
@@ -49,6 +50,7 @@ window.Webflow.push(() => {
   spanCMS();
   spanUcCMS();
   spanRisques();
+  spanGeneric();
 
   const path = window.location.pathname;
 

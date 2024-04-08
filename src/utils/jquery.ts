@@ -17,6 +17,20 @@ export function blogCategories() {
   });
 }
 
+// Span - Generic Title
+export function spanGeneric() {
+  $(document).ready(function () {
+    $('.generic-title').html(function (_, html) {
+      return html.replace(/-(.*?)-/g, '<span class="heading-generic-brand">$1</span>');
+    });
+  });
+  $(document).ready(function () {
+    $('.generic-title-alternate').html(function (_, html) {
+      return html.replace(/-(.*?)-/g, '<span class="heading-generic-alternate">$1</span>');
+    });
+  });
+}
+
 // Span - CMS Title
 export function spanCMS() {
   $(document).ready(function () {
