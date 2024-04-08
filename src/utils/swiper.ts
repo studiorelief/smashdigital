@@ -33,6 +33,10 @@ export function swiperRisque(): void {
     mousewheel: {
       forceToAxis: true,
     },
+    navigation: {
+      nextEl: '.swiper-right.is-risque',
+      prevEl: '.swiper-left.is-risque',
+    },
     loop: false,
     centeredSlides: true,
     slidesPerView: 'auto',

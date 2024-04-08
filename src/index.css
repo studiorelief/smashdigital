@@ -131,10 +131,10 @@
   transition: opacity 0.5s ease-in-out !important;
 }
 
-.swiper-left.is-uc.swiper-button-disabled {
+.swiper-left.is-uc.swiper-button-disabled, .swiper-right.is-risque.swiper-button-disabled {
   opacity: 0.15;
 }
 
-.swiper-right.is-uc.swiper-button-disabled {
+.swiper-right.is-uc.swiper-button-disabled, .swiper-left.is-risque.swiper-button-disabled {
   opacity: 0.15;
 }
