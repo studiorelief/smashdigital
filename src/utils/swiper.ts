@@ -52,7 +52,7 @@ export function swiperReferences(): void {
     mousewheel: {
       forceToAxis: true,
     },
-    slideToClickedSlide: false,
+    slideToClickedSlide: true,
     loop: true,
     centeredSlides: true,
     slidesPerView: 'auto',
