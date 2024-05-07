@@ -66,16 +66,16 @@ export function swiperUseCase(): void {
     direction: 'horizontal',
     /* pagination: true, */
     navigation: {
-      nextEl: '.swiper-left',
-      prevEl: '.swiper-right',
+      nextEl: '.swiper-right',
+      prevEl: '.swiper-left',
     },
+    loop: true,
     createElements: true,
     autoHeight: true,
     mousewheel: {
       forceToAxis: true,
     },
     slideToClickedSlide: false,
-    loop: false,
     centeredSlides: true,
     slidesPerView: 'auto',
     spaceBetween: '20rem',
