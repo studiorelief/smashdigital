@@ -11,6 +11,7 @@ import {
 } from '$utils/jquery';
 import { loadScript } from '$utils/loadScript';
 import { swiperPartners, swiperReferences, swiperRisque, swiperUseCase } from '$utils/swiper';
+import { tradMonth } from '$utils/tradmonth';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -43,6 +44,12 @@ window.Webflow.push(() => {
   if (window.matchMedia('(min-width: 991px)').matches) {
     swipeElement();
   }
+
+  /* 
+  Traduction mois
+  */
+
+  tradMonth();
 
   /* 
   Replace element -*-
