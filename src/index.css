@@ -1,0 +1,140 @@
+.section_hero:hover {
+  cursor: url('https://uploads-ssl.webflow.com/65c9e33d79bb75bfc766d6f0/661401613d64c19a592076ec_cursor-big.svg') 0 0, auto;
+}
+
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+/* swiper linear loop */
+.swiper.is-partenaires .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+/*
+! Swiper Références
+*/
+
+.swiper-slide.is-references {
+  transition:
+    transform 2000ms ease,
+    opacity 500ms ease;
+  transform: scale(0.5) !important;
+  opacity: 0;
+}
+
+.swiper-slide.is-references.swiper-slide-active {
+  transform: scale(1) !important;
+  opacity: 1;
+  animation: activeSlideZIndex 0s ease 0.5s forwards;
+  z-index: 2;
+}
+
+.swiper-slide.is-references.swiper-slide-prev,
+.swiper-slide.is-references.swiper-slide-next {
+  transform: scale(0.75) !important;
+  opacity: 0.5;
+}
+
+/* Slide active */
+
+.swiper-slide.is-references.swiper-slide-active .references_cards-wrapper,
+.swiper-slide.is-references.swiper-slide-active .references_quote-wrapper {
+  background-color: var(--border-color--border-brand);
+  border-color: var(--border-color--border-brand);
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s, filter 0.5s;
+}
+
+.swiper-slide.is-references.swiper-slide-active .references_quote-wrapper  {
+  transform: scale(1.6) !important;
+}
+
+.swiper-slide.is-references.swiper-slide-active .references_quote  {
+  transform: scale(1.4) !important;
+}
+
+.swiper-slide.is-references.swiper-slide-active .references_line {
+  background-color: var(--border-color--border-brand);
+}
+
+.swiper-slide.is-references.swiper-slide-active .references_quote-wrapper {
+  color: var(--text-color--text-contrast) !important;
+  border-color: var(--border-color--border-brand);
+}
+
+.swiper-slide.is-references.swiper-slide-active .references_infos-wrapper,
+.swiper-slide.is-references.swiper-slide-active .references_name-wrapper,
+.swiper-slide.is-references.swiper-slide-active .references_job {
+  border-color: var(--text-color--text-contrast);
+}
+
+.swiper-slide.is-references.swiper-slide-active .references_cards-wrapper {
+  color: var(--text-color--text-alternate);
+}
+
+.swiper-slide.is-references.swiper-slide-active .references_profil-picture {
+  filter: grayscale(0%);
+}
+
+/*
+! Swiper Risques
+*/
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  background-color: var(--background-color--background-tertiary);
+  position: relative ! important;
+  cursor: grab;
+  border-radius: 0px;
+  min-height: 0.5rem;
+}
+
+.swiper-scrollbar-drag {
+  background: var(--background-color--background-contrast) !important;
+}
+
+
+.swiper-slide.is-risque.w-dyn-item {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease-in-out !important;
+}
+
+.swiper-slide.is-risque.w-dyn-item.swiper-slide-active {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in-out !important;
+}
+
+
+.swiper-slide.is-risque.w-dyn-item .risque_text-wrapper {
+  position: relative;
+  left: 2rem; 
+  transition: left 0.5s ease-in-out; 
+}
+
+
+.swiper-slide.is-risque.w-dyn-item.swiper-slide-active .risque_text-wrapper {
+  left: 0rem; 
+}
+
+/*
+! Swiper Use Cases
+*/
+
+.swiper-slide.is-uc.w-dyn-item {
+  opacity: 0 !important;
+  transition: opacity 0.15s ease-in-out !important;
+  width: 80%;
+}
+
+.swiper-slide.is-uc.w-dyn-item.swiper-slide-active {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in-out !important;
+}
+
+.swiper-left.is-uc.swiper-button-disabled, .swiper-right.is-risque.swiper-button-disabled {
+  opacity: 0.15;
+}
+
+.swiper-right.is-uc.swiper-button-disabled, .swiper-left.is-risque.swiper-button-disabled {
+  opacity: 0.15;
+}
