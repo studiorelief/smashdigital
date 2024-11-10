@@ -59,6 +59,11 @@ window.Webflow.push(() => {
   spanRisques();
   spanGeneric();
 
+  /*
+  Global
+  */
+  swiperUseCase();
+
   const path = window.location.pathname;
 
   if (path.includes('/blog')) {
@@ -76,6 +81,5 @@ window.Webflow.push(() => {
   }
 
   if (path.includes('/use-case')) {
-    swiperUseCase();
   }
 });
